@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15D5DEEF2472C6F8004070EB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15D5DEEE2472C6F8004070EB /* main.cpp */; };
+		15D5DEF72472C77A004070EB /* crypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15D5DEF52472C77A004070EB /* crypto.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		15D5DEEB2472C6F8004070EB /* cryptopp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cryptopp; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D5DEEE2472C6F8004070EB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		15D5DEF52472C77A004070EB /* crypto.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = crypto.cpp; sourceTree = "<group>"; };
+		15D5DEF62472C77A004070EB /* crypto.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = crypto.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				15D5DEEE2472C6F8004070EB /* main.cpp */,
+				15D5DEF52472C77A004070EB /* crypto.cpp */,
+				15D5DEF62472C77A004070EB /* crypto.hpp */,
 			);
 			path = cryptopp;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D5DEF72472C77A004070EB /* crypto.cpp in Sources */,
 				15D5DEEF2472C6F8004070EB /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,8 +245,12 @@
 		15D5DEF32472C6F8004070EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MB2C9TCXMD;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/Cellar/cryptopp/8.1.0/include;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/Cellar/cryptopp/8.1.0/lib;
+				"OTHER_LDFLAGS[arch=*]" = "-lcryptopp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +258,7 @@
 		15D5DEF42472C6F8004070EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MB2C9TCXMD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
